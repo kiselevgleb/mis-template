@@ -1,14 +1,11 @@
 // TODO: write your code here
 import sum from './basic';
 
-console.log('worked');
-
-console.log(sum([1, 2]));
-
 export default function pars(params) {
-  try {
+  // if(isNaN(params)){
+  if (!params.match(/^\d+$/)) {
+    return "Error";
+  } else {
     return parseInt(params);
-  } catch (error) {
-    throw new Error('oops');
   }
 }
